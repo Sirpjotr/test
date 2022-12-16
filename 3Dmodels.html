@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+    
+
+
+
+    <body style="margin : 0px; overflow: hidden;">
+
+        <a-scene arjs embedded>
+
+            <a-assets>
+                <a-asset-item id="ded" src="3Dmodels-patterns/1.glb"></a-asset-item>
+            </a-assets>
+
+            <a-marker type="pattern" url="sec-task-cube/letterA.patt">
+                <a-gltf-model src="#ded"
+                scale="0.2 0.2 0.2"
+                rotation="0 90 0"></a-gltf-model>
+            </a-marker>
+            
+            <a-entity camera></a-entity>
+        </a-scene>
+        <div class="header">
+            <a href="#">
+                <img src="team-cube-patterns/arrow.png" alt="back" class="back-button">
+            </a>
+        </div>
+        <style>
+            .back-button {
+                height: 40px;
+                margin: 0;
+            }
+            .header {
+                background-color: rgb(29, 29, 29);
+                width: 100%;
+                opacity: 50%;
+                position: absolute;
+                top: 0;
+            }
+        </style>
+    </body>
+</html>
